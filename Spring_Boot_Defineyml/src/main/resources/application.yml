@@ -1,0 +1,12 @@
+spring:
+  profiles:
+    active: dev   #引用 application-dev.yml文件,这里我们可以改为 prod,表示引用application-prod.yml文件
+
+com:
+  eirunye:
+    ymlname: ymlroot
+    ymlpass: yml123456
+
+eiyml:
+    ymluser: root
+    ymlpass: 123456
