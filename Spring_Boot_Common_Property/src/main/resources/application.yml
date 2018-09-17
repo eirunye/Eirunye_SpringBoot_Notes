@@ -1,0 +1,91 @@
+spring:
+  profiles:
+    active: dev   #引用 application-dev.yml文件,这里我们可以改为 prod,表示引用application-prod.yml文件
+#---------------------------------------------------
+# datasource MySQL数据库配置
+#---------------------------------------------------
+  datasource:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://127.0.0.1:3306/demo?useSSL=false&requireSSL=false&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+      username: root
+      password: 12346
+#----------------------------------------------------
+# Jpa
+#----------------------------------------------------
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+#---------------------------------------------------
+# data mongodb 配置
+#---------------------------------------------------
+  data:
+    mongodb:
+      host: 127.0.0.1
+      uri: mongodb://localhost/test
+      username: root
+      password: 123456
+      database: test
+#----------------------------------------------------
+# test 测试
+#----------------------------------------------------
+  test:
+    database:
+      replace: any
+    mockmvc:
+      print: default
+#-----------------------------------------------------
+# Servlet
+#-----------------------------------------------------
+  servlet:
+    multipart:
+      enabled: true
+      location: /log
+      max-request-size: 10MB
+      max-file-size: 1MB
+      resolve-lazily: false
+#----------------------------------------------------
+# Http peiz
+#----------------------------------------------------
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+#---------------------------------------------------
+# mail 邮箱配置
+#---------------------------------------------------
+  mail:
+    host: smtp.property.com
+    port: 34556
+    username: haha
+    password: 123456
+    default-encoding: UTF-8
+#--------------------------------------------------
+# server 或者放在 dev里面配置
+#--------------------------------------------------
+server:
+  connection-timeout: 20000
+  http2:
+    enabled: true
+  error:
+    path: /error
+
+# ---------------大家查看文档进行配置，不一一列举了----------------------
+
+# https://docs.spring.io/spring-boot/docs/2.0.4.RELEASE/reference/htmlsingle/#common-application-properties
+
+# FREEMARKER
+
+# SPRING HATEOAS
+
+# HTTP message conversion
+
+# GSON
+
+# JDBC
+
+# JEST (Elasticsearch HTTP client) (JestProperties)
+
+# CASSANDRA (CassandraProperties)
+# --------------------------等等----------------------------------
+
