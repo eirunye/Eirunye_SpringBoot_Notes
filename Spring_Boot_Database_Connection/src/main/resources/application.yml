@@ -1,0 +1,19 @@
+spring:
+  datasource:
+      driver-class-name: com.mysql.cj.jdbc.Driver  # MySql jdbc Driver
+      # 连接数据库
+      # eirunye_springboot_notes表示的是你创建的数据库;
+      # useSSL:是否使用SSL证书验证;
+      # characterEncoding:编码格式;
+      # useJDBCCompliantTimezoneShift:是否使用符合JDBC的时区转换;
+      # useLegacyDatetimeCode:是否使用旧版日期时间码;
+      # serverTimezone:选择服务器时间方式;
+      url: jdbc:mysql://127.0.0.1:3306/eirunye_springboot_notes?useSSL=false&requireSSL=false&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+      username: root   #本地设置数据库账号
+      password: 123456 #密码
+  jpa:    #Jpa配置 更多配置解释请看 https://github.com/eirunye/SpringBoot_Property/blob/master/src/main/resources/application.properties
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+server:  #端口号配置
+  port: 8081
