@@ -2,7 +2,7 @@
 
 这是Spring Boot 系列代码仓库
 
-<div align=center>
+
 ![Spring Boot.png](https://upload-images.jianshu.io/upload_images/3012005-06639c85d05db900.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/300)
 
 
