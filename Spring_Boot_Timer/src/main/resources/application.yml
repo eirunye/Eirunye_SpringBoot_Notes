@@ -1,0 +1,21 @@
+spring:
+  profiles:
+    active: dev
+  datasource:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://127.0.0.1:3306/myjpa?useSSL=false&requireSSL=false&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+      username: root
+      password: 123456
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+mybatis:
+  mapper-locations: classpath:mapping/*.xml
+  type-aliases-package: com.example.myjpa.model
+
+
+
+
+
+
